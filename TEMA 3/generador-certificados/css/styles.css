@@ -1,0 +1,314 @@
+:root {
+  --fondo: #eef1f5;
+  --panel: #ffffff;
+  --borde: #cfd6e0;
+  --texto: #1f2937;
+  --suave: #5f6b7a;
+  --azul: #24476b;
+  --dorado: #c9a64e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+.contenedor-principal {
+  width: min(1200px, 92%);
+  margin: 28px auto 40px;
+}
+
+.encabezado {
+  margin-bottom: 20px;
+}
+
+.encabezado h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.encabezado p {
+  margin: 0;
+  color: var(--suave);
+  font-size: 1.1rem;
+}
+
+.panel-formulario,
+.vista-certificado {
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.panel-formulario {
+  margin-bottom: 24px;
+}
+
+.panel-formulario h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.grid-formulario {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.grupo-campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.grupo-campo input {
+  width: 100%;
+  height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.acciones {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  background: #2f4d73;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #243c5a;
+}
+
+.vista-certificado {
+  min-height: 760px;
+}
+
+.marco-vista {
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 16px;
+  background: #f6f7f9;
+  border-radius: 10px;
+}
+
+#certificado {
+  width: 1100px;
+  min-height: 720px;
+  background: #fffdf8;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.borde-exterior {
+  width: 100%;
+  border: 8px solid var(--dorado);
+  padding: 16px;
+}
+
+.borde-interior {
+  width: 100%;
+  min-height: 100%;
+  border: 2px solid #dcc27b;
+  padding: 56px 72px 46px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitulo,
+#certificado h1,
+.texto,
+.dato-principal,
+.dato-secundario,
+.dato-fecha,
+.firma p {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.subtitulo {
+  color: #8b6a28;
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+}
+
+#certificado h1 {
+  margin: 0 0 26px;
+  font-size: 4rem;
+  color: #2a241c;
+}
+
+.texto {
+  font-size: 1.15rem;
+  margin: 12px 0;
+  color: #2c3138;
+}
+
+.dato-principal {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--azul);
+  margin: 10px 0 18px;
+}
+
+.dato-secundario {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--azul);
+  margin: 10px 0 18px;
+}
+
+.dato-fecha {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--azul);
+  margin: 10px 0 0;
+}
+
+.espacio-superior {
+  margin-top: 26px;
+}
+
+.firmas {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.firma {
+  flex: 1;
+}
+
+.linea {
+  border-top: 1px solid #5b6168;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.firma p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .grid-formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .vista-certificado {
+    min-height: auto;
+  }
+
+  .marco-vista {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  #certificado {
+    width: 1000px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #certificado,
+  #certificado * {
+    visibility: visible;
+  }
+
+  #certificado {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 277mm;
+    min-height: 190mm;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .borde-exterior {
+    border-width: 6px;
+    padding: 10px;
+  }
+
+  .borde-interior {
+    min-height: 174mm;
+    padding: 18mm 18mm 12mm;
+  }
+
+  .subtitulo {
+    font-size: 14pt;
+  }
+
+  #certificado h1 {
+    font-size: 32pt;
+    margin-bottom: 10mm;
+  }
+
+  .texto {
+    font-size: 14pt;
+    margin: 4mm 0;
+  }
+
+  .dato-principal {
+    font-size: 28pt;
+    margin: 3mm 0 6mm;
+  }
+
+  .dato-secundario {
+    font-size: 22pt;
+    margin: 3mm 0 6mm;
+  }
+
+  .dato-fecha {
+    font-size: 20pt;
+  }
+
+  .firmas {
+    margin-top: 18mm;
+    gap: 12mm;
+  }
+
+  .firma p {
+    font-size: 12pt;
+  }
+}

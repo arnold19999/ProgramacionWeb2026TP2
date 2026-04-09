@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Certificados</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="contenedor-principal">
+    <header class="encabezado">
+      <h1>Generador de Certificados</h1>
+      <p>Trabajo práctico - HTML, CSS y JavaScript</p>
+    </header>
+
+    <section class="panel-formulario">
+      <h2>Datos del formulario</h2>
+      <div class="grid-formulario">
+        <div class="grupo-campo">
+          <label for="inputNombre">Nombre</label>
+          <input type="text" id="inputNombre" placeholder="Ingrese el nombre completo">
+        </div>
+        <div class="grupo-campo">
+          <label for="inputCurso">Curso</label>
+          <input type="text" id="inputCurso" placeholder="Ingrese el curso">
+        </div>
+        <div class="grupo-campo">
+          <label for="inputFecha">Fecha</label>
+          <input type="date" id="inputFecha">
+        </div>
+      </div>
+
+      <div class="acciones">
+        <button type="button" id="btnLimpiar">Limpiar</button>
+        <button type="button" id="btnImprimir">Imprimir / PDF</button>
+      </div>
+    </section>
+
+    <section class="vista-certificado">
+      <div class="marco-vista">
+        <div id="certificado">
+          <div class="borde-exterior">
+            <div class="borde-interior">
+              <p class="subtitulo">Certificado de Participación</p>
+              <h1>Certificado</h1>
+              <p class="texto">Se otorga el presente certificado a:</p>
+              <p id="nombre" class="dato-principal">Nombre del participante</p>
+              <p class="texto">Por haber participado satisfactoriamente en el curso:</p>
+              <p id="curso" class="dato-secundario">Nombre del curso</p>
+              <p class="texto espacio-superior">Expedido en fecha:</p>
+              <p id="fechaTexto" class="dato-fecha">dd/mm/aaaa</p>
+
+              <div class="firmas">
+                <div class="firma">
+                  <div class="linea"></div>
+                  <p>Firma del docente</p>
+                </div>
+                <div class="firma">
+                  <div class="linea"></div>
+                  <p>Firma del director</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

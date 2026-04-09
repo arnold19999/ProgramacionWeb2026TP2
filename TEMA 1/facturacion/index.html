@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Facturación Web Profesional</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="contenedor">
+    <header class="titulo-principal no-print">
+      <h1>Sistema de Facturación Web Profesional</h1>
+      <p>Trabajo práctico - HTML, CSS y JavaScript</p>
+    </header>
+
+    <div class="acciones no-print">
+      <button type="button" id="btnAgregar">Agregar producto</button>
+      <button type="button" id="btnNuevaFactura">Nueva factura</button>
+      <button type="button" id="btnImprimir">Imprimir / PDF</button>
+    </div>
+
+    <section id="factura" class="factura">
+      <div class="franja-superior"></div>
+
+      <div class="cabecera-factura">
+        <div class="empresa-box">
+          <h2>ANATARES DG</h2>
+          <p>RUC: 80012345-6</p>
+          <p>Dirección: Villarrica, Paraguay</p>
+          <p>Tel.: 0983 870 180</p>
+        </div>
+
+        <div class="control-box">
+          <p><strong>Factura N°:</strong> <span id="numeroFactura"></span></p>
+          <p><strong>Condición de venta:</strong> Contado</p>
+        </div>
+      </div>
+
+      <div class="datos-cliente-grid">
+        <div class="campo ancho-doble">
+          <label for="nombreCliente">Nombre o Razón Social</label>
+          <input type="text" id="nombreCliente" placeholder="Ingrese el nombre del cliente">
+        </div>
+
+        <div class="campo">
+          <label for="documentoCliente">RUC o C.I.</label>
+          <input type="text" id="documentoCliente" placeholder="Ingrese RUC o CI">
+        </div>
+
+        <div class="campo ancho-doble">
+          <label for="direccionCliente">Dirección</label>
+          <input type="text" id="direccionCliente" placeholder="Ingrese la dirección del cliente">
+        </div>
+
+        <div class="campo">
+          <label for="fechaFactura">Fecha de emisión</label>
+          <input type="date" id="fechaFactura">
+        </div>
+      </div>
+
+      <div class="tabla-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Cantidad</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Subtotal</th>
+              <th>IVA 10%</th>
+              <th class="no-print">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody id="tablaProductos"></tbody>
+        </table>
+      </div>
+
+      <div class="resumen-box">
+        <div class="fila-resumen">
+          <span>Valor parcial:</span>
+          <strong id="valorParcial">Gs. 0</strong>
+        </div>
+        <div class="fila-resumen">
+          <span>Liquidación del IVA (10%):</span>
+          <strong id="ivaGeneral">Gs. 0</strong>
+        </div>
+        <div class="fila-resumen total-final">
+          <span>Total a pagar:</span>
+          <strong id="totalGeneral">Gs. 0</strong>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
