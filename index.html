@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajo Práctico - Programación Web Avanzada</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #1f2937;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .contenedor {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .encabezado {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .encabezado h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #1e3a5f;
+    }
+
+    .encabezado p {
+      font-size: 1rem;
+      color: #4b5563;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dbe3ec;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .card a {
+      display: inline-block;
+      text-decoration: none;
+      background: #1e3a5f;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: background 0.2s ease;
+    }
+
+    .card a:hover {
+      background: #274c77;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="encabezado">
+      <h1>Trabajo Práctico 02</h1>
+      <p>Programación Web Avanzada - Menú principal de temas</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Tema 1</h2>
+        <p>Sistema de Facturación Web Profesional.</p>
+        <a href="tema1/facturacion/">Abrir tema 1</a>
+      </div>
+
+      <div class="card">
+        <h2>Tema 2</h2>
+        <p>Dashboard de Rendimiento Escolar.</p>
+        <a href="tema2/dashboard-rendimiento/">Abrir tema 2</a>
+      </div>
+
+      <div class="card">
+        <h2>Tema 3</h2>
+        <p>Generador de Certificados.</p>
+        <a href="tema3/generador-certificados/">Abrir tema 3</a>
+      </div>
+
+      <div class="card">
+        <h2>Tema 4</h2>
+        <p>Carrito de Compras Profesional.</p>
+        <a href="tema4/carrito-de-compras/">Abrir tema 4</a>
+      </div>
+
+      <div class="card">
+        <h2>Tema 5</h2>
+        <p>Agenda de Eventos Inteligente.</p>
+        <a href="tema5/agenda-eventos/">Abrir tema 5</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>Desarrollado por Arnaldo Espínola Ramírez</p>
+    </footer>
+  </div>
+</body>
+</html>
